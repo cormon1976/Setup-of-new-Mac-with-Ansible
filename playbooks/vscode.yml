@@ -1,0 +1,25 @@
+---
+
+- hosts: localhost
+
+  tasks:
+
+    - name: Check if Vscode exists
+      stat:
+        path: /Applications/Visual Studio Code.app
+      register: stat_vscode_result
+
+    - name: Install vscode packages
+      shell: code --install-extension {{ item }}
+      with_items:
+          golang.go
+          ms-python.python
+          2gua.rainbow-bracket
+          4ops.terraforme
+          vscode-icons-team.vscode-icons
+          github.vscode-pull-request-github
+          shd101wyy.markdown-preview-enhanced
+      when: stat_vscode_result.stat.exists
+
+
+ 
