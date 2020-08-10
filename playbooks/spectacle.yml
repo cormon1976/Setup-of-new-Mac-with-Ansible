@@ -1,0 +1,14 @@
+---
+- hosts: local
+  become: yes
+  vars:
+    app_name: Spectacle
+    app_url: https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.2.zip
+    installer_type: app
+    install_method: zip
+    download_file_type: zip
+  roles:
+    - setup
+    - installer
+    - cleanup
+   

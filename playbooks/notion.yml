@@ -1,0 +1,14 @@
+---
+- hosts: local
+  become: yes
+  vars:
+    app_name: Notion
+    app_url: https://desktop-release.notion-static.com/Notion-2.0.7.dmg
+    installer_type: app
+    download_file_type: dmg
+    install_method: dmg
+  roles: 
+    - setup
+    - installer
+    - cleanup
+   

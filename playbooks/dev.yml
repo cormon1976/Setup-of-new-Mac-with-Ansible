@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+
+  vars:
+      dev_folder: "/Users/yourusername/Stuff/dev"
+      sec_folder: "/Users/yourusername/Stuff/sec"
+      cloud_folder: "/Users/yourusername/Stuff/cloud"
+      blog_folder: "/Users/yourusername/Stuff/blog"
+      git_folder: "/Users/yourusername/Stuff/git"
+
+  tasks:
+    - name: Create base code directories
+      file:
+        path: "{{ item }}"
+        state: directory
+      with_items:
+        - "{{ dev_folder }}/go"
+        - "{{ dev_folder }}/python"
+        - "{{ dev_folder }}/python/topics"
+        - "{{ sec_folder }}/topics"
+        - "{{ cloud_folder }}/vendors"
+        - "{{ blog_folder }}"
+        - "{{ git_folder }}/public"
+        - "{{ git_folder }}/personal"
+
+
+
+
+
+
+      
