@@ -1,0 +1,14 @@
+---
+- import_playbook : playbooks/firefox.yml
+- import_playbook : playbooks/postman.yml
+- import_playbook : playbooks/google_chrome.yml
+- import_playbook : playbooks/slack.yml
+- import_playbook : playbooks/visual_studio_code.yml
+- import_playbook : playbooks/spectacle.yml
+- import_playbook : playbooks/iterm.yml
+- import_playbook : playbooks/notion.yml
+- import_playbook : playbooks/draw.yml
+- import_playbook : playbooks/alfred.yml
+- import_playbook : playbooks/iina.yml
+- import_playbook : playbooks/docker.yml
+- import_playbook : playbooks/virtualbox.yml
